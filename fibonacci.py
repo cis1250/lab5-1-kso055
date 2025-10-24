@@ -4,7 +4,7 @@
 # TODO: (Read detailed instructions in the Readme file)
 def get_nums():
   while True:
-    num = input("Enter how many terms of the Fibonacci sequence you wantL ")
+    num = input("Enter how many terms of the Fibonacci sequence you want: ")
 
     if num.isdigit():
         num = int(num)
@@ -19,10 +19,10 @@ def get_nums():
 def generate_fib(n):
   sequence = []
   a, b = 0, 1
-  for i int range(n):
+  for i in range(n):
     sequence.append(a)
     a, b = b, a + b
-return sequence
+  return sequence
 
 # Function 3: Print the Fibonacci sequence
 def print_sequence(sequence):
