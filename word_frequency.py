@@ -24,3 +24,40 @@ def is_sentence(text):
         return False
 
     return True
+
+# Function 1: 
+def calculate_frequencies(sentence):
+    # Remove the punctuation and makes it lowercase
+    seneten = sentence[:-1].lower()
+
+    # Split it into words
+    word_list = sentence.split()
+
+    words = []
+    frequencies = []
+
+    for word in word_list:
+        if word in words:
+            index = words.index(word)
+            frequencies[index] += 1
+        else:
+            words.append(word)
+            frequencies.append(1)
+
+return words, frequencies
+
+# Function 3: Print the word frequencies
+def print_frequencies(words, frequencies):
+    print("\nWord frequencies: ")
+    for i in range(len(words)):
+        print(f"{words[i]}: {frequencies[i]}")
+
+# Main
+def main():
+    sentence = get_sentence()
+    words, frequencies = calculate_frequencies(sentence)
+    print_frequencies(words, frequencies)
+
+# Run program
+if __name__ == "__main__":
+    main()
