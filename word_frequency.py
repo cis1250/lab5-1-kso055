@@ -32,8 +32,8 @@ def get_sentence():
         if is_sentence(sentence):
             return sentence
         else:
-            print("Invalid sentence. It must start with a capital letter, contain words, and end with '.', '!', or '?
-                  .")
+            print("Invalid sentence. It must start with a capital letter, contain words, and end with '.', '!', or '?'.")
+            
 # Function 2: 
 def calculate_frequencies(sentence):
     # Remove the punctuation and makes it lowercase
@@ -53,7 +53,7 @@ def calculate_frequencies(sentence):
             words.append(word)
             frequencies.append(1)
 
-return words, frequencies
+    return words, frequencies
 
 # Function 3: Print the word frequencies
 def print_frequencies(words, frequencies):
