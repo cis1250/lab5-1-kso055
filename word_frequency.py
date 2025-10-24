@@ -25,10 +25,19 @@ def is_sentence(text):
 
     return True
 
-# Function 1: 
+# Funtion 1:
+def get_sentence():
+    while True:
+        sentence = input("Enter a sentence: ").strip()
+        if is_sentence(sentence):
+            return sentence
+        else:
+            print("Invalid sentence. It must start with a capital letter, contain words, and end with '.', '!', or '?
+                  .")
+# Function 2: 
 def calculate_frequencies(sentence):
     # Remove the punctuation and makes it lowercase
-    seneten = sentence[:-1].lower()
+    sentence = sentence[:-1].lower()
 
     # Split it into words
     word_list = sentence.split()
